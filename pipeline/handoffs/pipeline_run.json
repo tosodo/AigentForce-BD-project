@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "job": {"type": "string"},
+    "folder": {"type": "string"},
+    "status": {"type": "string"},
+    "message": {"type": "string"},
+    "proof_checks": {"type": "object"}
+  },
+  "required": ["job", "status"]
+}

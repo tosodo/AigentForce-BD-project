@@ -1,17 +1,33 @@
 {
-  "company_name": "",
-  "website": "",
-  "industry": "",
-  "hq_location": "",
-  "team_size": "",
-  "hiring_signals": [],
-  "decision_makers": [
-    {
-      "full_name": "",
-      "role": "",
-      "email": "",
-      "linkedin_url": ""
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "company_name": {"type": "string", "minLength": 1},
+    "website": {"type": "string"},
+    "industry": {"type": "string"},
+    "hq_location": {"type": "string"},
+    "team_size": {"type": "string"},
+    "hiring_signals": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "decision_makers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "full_name": {"type": "string"},
+          "role": {"type": "string"},
+          "email": {"type": "string"},
+          "linkedin_url": {"type": "string"}
+        },
+        "required": ["full_name", "role"]
+      }
+    },
+    "pain_points": {
+      "type": "array",
+      "items": {"type": "string"}
     }
-  ],
-  "pain_points": []
+  },
+  "required": ["company_name"]
 }

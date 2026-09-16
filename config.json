@@ -1,0 +1,20 @@
+{
+  "pipeline": {
+    "niche": "SaaS companies hiring SDRs",
+    "geography": "London, UK",
+    "min_company_count": 5,
+    "max_companies": 10,
+    "allowed_sources": ["job_board", "careers_page", "linkedin_public", "news"]
+  },
+  "scoring_weights": {
+    "hiring_urgency": 1.0,
+    "team_size_fit": 1.0,
+    "budget_signals": 1.0,
+    "industry_fit": 1.0,
+    "tech_maturity": 1.0
+  },
+  "orchestrator": {
+    "step_wait": false,
+    "audit_log": "logs/pipeline_runs.jsonl"
+  }
+}

@@ -1,6 +1,14 @@
 {
-  "company_name": "",
-  "email_copy": "",
-  "linkedin_copy": "",
-  "follow_up_sequence": []
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "company_name": {"type": "string", "minLength": 1},
+    "email_copy": {"type": "string"},
+    "linkedin_copy": {"type": "string"},
+    "follow_up_sequence": {
+      "type": "array",
+      "items": {"type": "string"}
+    }
+  },
+  "required": ["company_name", "email_copy", "linkedin_copy", "follow_up_sequence"]
 }

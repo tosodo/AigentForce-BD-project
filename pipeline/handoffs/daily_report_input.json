@@ -1,0 +1,24 @@
+{
+  "date": "",
+  "activities": [
+    {
+      "type": "lead_research",
+      "company_name": "",
+      "details": "",
+      "timestamp": ""
+    }
+  ],
+  "top_opportunities": [
+    {
+      "company_name": "",
+      "icp_score": 0,
+      "reason": ""
+    }
+  ],
+  "risks": [
+    {
+      "description": "",
+      "severity": "low"
+    }
+  ]
+}

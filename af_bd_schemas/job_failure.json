@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "job": {"type": "string"},
+    "status": {"type": "string"},
+    "error_type": {"type": "string"},
+    "failed_rule": {"type": "string"},
+    "timestamp": {"type": "string"},
+    "input_summary": {"type": "object"},
+    "error_detail": {"type": "string"}
+  },
+  "required": ["job", "status", "error_type", "timestamp", "error_detail"]
+}

@@ -1,6 +1,23 @@
 {
-  "company_summary": "",
-  "decision_maker_summary": "",
-  "recommended_questions": [],
-  "value_map": []
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "company_summary": {"type": "string"},
+    "decision_maker_summary": {"type": "string"},
+    "recommended_questions": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "value_map": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "need": {"type": "string"},
+          "value": {"type": "string"}
+        }
+      }
+    }
+  },
+  "required": ["company_summary", "decision_maker_summary", "recommended_questions", "value_map"]
 }

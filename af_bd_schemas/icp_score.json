@@ -1,13 +1,22 @@
 {
-  "company_name": "",
-  "icp_score": 0,
-  "score_breakdown": {
-    "hiring_urgency": 0,
-    "team_size_fit": 0,
-    "budget_signals": 0,
-    "industry_fit": 0,
-    "tech_maturity": 0
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "company_name": {"type": "string", "minLength": 1},
+    "icp_score": {"type": "integer", "minimum": 0, "maximum": 100},
+    "score_breakdown": {
+      "type": "object",
+      "properties": {
+        "hiring_urgency": {"type": "integer", "minimum": 0, "maximum": 20},
+        "team_size_fit": {"type": "integer", "minimum": 0, "maximum": 20},
+        "budget_signals": {"type": "integer", "minimum": 0, "maximum": 20},
+        "industry_fit": {"type": "integer", "minimum": 0, "maximum": 20},
+        "tech_maturity": {"type": "integer", "minimum": 0, "maximum": 20}
+      },
+      "required": ["hiring_urgency", "team_size_fit", "budget_signals", "industry_fit", "tech_maturity"]
+    },
+    "recommended_angle": {"type": "string"},
+    "reasoning": {"type": "string"}
   },
-  "recommended_angle": "",
-  "reasoning": ""
+  "required": ["company_name", "icp_score", "score_breakdown", "recommended_angle", "reasoning"]
 }
