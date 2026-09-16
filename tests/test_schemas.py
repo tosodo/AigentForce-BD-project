@@ -1,4 +1,4 @@
-﻿import json
+import json
 import glob
 
 def test_json_schemas_parse():
